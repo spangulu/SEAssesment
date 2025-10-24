@@ -49,8 +49,7 @@ automation/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone [https://github.com/spangulu/SEAssesment.git]
 npm run install:all
 ```
 
@@ -96,5 +95,18 @@ npm run install:all
 | NodeJS Plugin          | Configure NodeJS 22         |
 | Cucumber Reports Plugin| UI test reporting           |
 | Allure Jenkins Plugin  | API report publishing       |
+
+###Intentional Failure Scenarios
+
+Some failures in the test results are expected and relate to known mismatches intentionally included in the assessment requirements:
+Grand Prix Results Scenario
+The scenario states George Russell finished 2nd, but the actual race data does not reflect this.
+The test correctly identifies and fails on this mismatch.
+
+South African Sign Language (SASL) Scenario
+The scenario expects SASL to be listed as an official language of South Africa.
+However, the provided API response does not include SASL.
+The test correctly flags this inconsistency.
+These failures confirm that the assertions and validation logic in the framework are functioning correctly and identifying requirement-to-data mismatches.
 
 
