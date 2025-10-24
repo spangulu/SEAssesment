@@ -1,0 +1,12 @@
+{
+	"name": "sa-assessment-tests",
+	"private": true,
+	"scripts": {
+		"install:bbc": "cd AssessmentTest/bbc-automation && npm install",
+		"install:api": "cd AssessmentTest/restcountries-api-tests && npm install",
+		"install:all": "npm run install:bbc && npm run install:api",
+		"test:bbc": "cd AssessmentTest/bbc-automation && npm test",
+		"test:api": "cd AssessmentTest/restcountries-api-tests && npm test",
+		"test:all": "npm run test:bbc && npm run test:api"
+	}
+}
