@@ -52,17 +52,21 @@ npm run install:all
 ✅ Run UI Tests (BBC Website)  -npm run test:bbc
 ✅ Run API Tests (REST Countries API) -npm run test:api
 
-**### Reports**
-**Cucumber UI Test Report **-automation/bbc-automation/reports/cucumber-report.json
-<img width="1914" height="943" alt="image" src="https://github.com/user-attachments/assets/ee46a8d9-2542-4842-9e19-870256425551" />
+### Cucumber UI Test Report
+<img src="/AssessmentTest/Images/CucumberReport.png" width="800" />
 
-**Allure API Test Report **-cd automation/restcountries-api-tests
-<img width="1919" height="886" alt="image" src="https://github.com/user-attachments/assets/2757edeb-0d8e-41aa-b4f3-0dc4eb4c91b9" />
+### Allure API Test Report
+<img src="/AssessmentTest/Images/AllureReportForAPI.png" width="800" />
 
-**Pipeline performs the following:**
-<img width="1918" height="938" alt="image" src="https://github.com/user-attachments/assets/60be1222-a902-4775-bab6-d1d819a209b6" />
-<img width="1915" height="773" alt="image" src="https://github.com/user-attachments/assets/59d35dc8-1bbe-4527-87f3-c813f4c2dc36" />
+### Jenkins Pipeline Overview
+<img src="/AssessmentTest/Images/JenkinsPipeLine.png" width="800" />
 
+### Jenkins Pipeline Steps
+<img src="/AssessmentTest/Images/JenkinsPipe.png" width="800" />
+
+
+
+### Jenkins Pipeline Steps
 Checkout Source Code
 Install Dependencies
 Run UI Tests (pipeline continues even if failed)
@@ -71,7 +75,7 @@ Run API Tests (pipeline continues even if failed)
 Publish Allure Report for API tests
 Clean Workspace
 
-**Jenkins Requirements:**
+###Jenkins Requirements:
 Plugin / Tool	Purpose
 NodeJS Plugin	Configure NodeJS 22
 Cucumber Reports Plugin	UI test reporting
