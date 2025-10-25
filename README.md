@@ -2,7 +2,7 @@
 
 UI & API Automation Framework
 
-This project contains **Playwright-based automation** for both **UI (BBC Sports)** and **REST Countries API**, integrated with **Cucumber BDD**, **Allure Reporting**, and **Jenkins CI Pipeline**.
+This project contains **Playwright-based automation** for both **UI (BBC Sports)** and **REST Countries API**, integrated with **Cucumber BDD and Allure Reporting**, and **Jenkins CI Pipeline**.
 
 ---
 
