@@ -73,6 +73,25 @@ npm run install:all
 ---
 
 ### 🛠️ Jenkins Pipeline Overview
+## 🔗 Jenkins Pipeline Access
+
+The Jenkins CI pipeline has been made available for reviewing the automated build and test execution process.
+
+**Jenkins URL:**  
+https://tisha-staminal-elsa.ngrok-free.dev
+
+**Login Credentials:**  
+- **Username:** `Tempuser`  
+- **Password:** `Assessment@0538`
+
+This account is configured with **limited access (read + build only)**. It allows you to:
+- Trigger the pipeline
+- Monitor the build logs
+- View and download the generated test reports
+
+### ⏱ Access Window
+The Jenkins environment will be accessible **Monday–Friday, between 8:30 AM and 5:00 PM (SAST)** while the host machine is online.  
+If access is required outside of these hours, please reach out and I will re-enable the secure tunnel.
 
 #### Pipeline Diagram
 
@@ -96,17 +115,18 @@ npm run install:all
 | Cucumber Reports Plugin| UI test reporting           |
 | Allure Jenkins Plugin  | API report publishing       |
 
-###Intentional Failure Scenarios
+## ❗ Test Failures Observed
+The following test scenarios are currently failing based on the data returned or validated during execution. These failures indicate mismatches between the expected results defined in the scenarios and the actual data available at runtime.
 
-Some failures in the test results are expected and relate to known mismatches intentionally included in the assessment requirements:
-Grand Prix Results Scenario
-The scenario states George Russell finished 2nd, but the actual race data does not reflect this.
-The test correctly identifies and fails on this mismatch.
-
-South African Sign Language (SASL) Scenario
-The scenario expects SASL to be listed as an official language of South Africa.
-However, the provided API response does not include SASL.
-The test correctly flags this inconsistency.
-These failures confirm that the assertions and validation logic in the framework are functioning correctly and identifying requirement-to-data mismatches.
+### 🏁 Grand Prix Results Scenario
+The scenario expects **George Russell** to have finished **2nd** in the 2023 Las Vegas Grand Prix.  
+However, the actual race results differ, which causes this test to fail.  
+This reflects that:
+- The expected podium data does not match the real results
+### 🇿🇦 South African Sign Language (SASL) Scenario
+The scenario expects **SASL** to be listed as one of South Africa’s official languages.  
+The API response used during validation does not include SASL, resulting in a failed assertion.  
+This indicates that:
+- The expected language list and API data are not aligned
 
 
