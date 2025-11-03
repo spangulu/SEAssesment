@@ -73,25 +73,6 @@ npm run install:all
 ---
 
 ### 🛠️ Jenkins Pipeline Overview
-## 🔗 Jenkins Pipeline Access
-
-The Jenkins CI pipeline has been made available for reviewing the automated build and test execution process.
-
-**Jenkins URL:**  
-https://tisha-staminal-elsa.ngrok-free.dev
-
-**Login Credentials:**  
-- **Username:** `Tempuser`  
-- **Password:** `Assessment@0538`
-
-This account is configured with **limited access (read + build only)**. It allows you to:
-- Trigger the pipeline
-- Monitor the build logs
-- View and download the generated test reports
-
-### ⏱ Access Window
-The Jenkins environment will be accessible **Monday–Friday, between 8:30 AM and 5:00 PM (SAST)** while the host machine is online.  
-If access is required outside of these hours, please reach out and I will re-enable the secure tunnel.
 
 #### Pipeline Diagram
 

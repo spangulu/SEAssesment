@@ -64,8 +64,9 @@ pipeline {
     /* ---------------- POST PIPELINE CLEANUP ---------------- */
     post {
         always {
-            echo "✅ Pipeline Completed"
+            echo "Pipeline Completed"
             cleanWs()
         }
     }
 }
+

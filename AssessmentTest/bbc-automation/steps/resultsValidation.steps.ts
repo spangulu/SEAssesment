@@ -1,4 +1,5 @@
 import { Given, When, Then } from '@cucumber/cucumber';
+import { expect } from '@playwright/test';
 import { TestContext } from "../support/world";
 import { BBCResultsPage } from '../pages/bbcResultsPage';
 
@@ -24,10 +25,24 @@ When('I open the {string} results page', async function (this: TestContext, race
 
 Then('the top 3 finishers should appear at the top of the race results table:', async function (this: TestContext, dataTable) {
   const expected = dataTable.hashes();
-  await resultsPage.verifyDriverPositions(expected);
+  for (const { Position, Driver } of expected) {
+    const pos = await resultsPage.findDriverPosition(Driver);
+    expect(pos, `Expected ${Driver} at position ${Position}, but found ${pos ?? 'none'}`).toBe(Number(Position));
+  }
 });
 
 Then('the team names for these drivers should be correctly listed as:', async function (this: TestContext, dataTable) {
   const expectedTeams = dataTable.hashes();
-  await resultsPage.verifyDriverTeams(expectedTeams);
+  for (const { Driver, Team } of expectedTeams) {
+    const rows = resultsPage.page.locator("table[aria-label='Race'] tbody tr");
+    const count = await rows.count();
+    let found = false;
+    for (let i = 0; i < count; i++) {
+      const row = rows.nth(i);
+      const cells = await row.locator('td').allTextContents();
+      const hay = cells.join(' ').toLowerCase();
+      if (hay.includes(Driver.toLowerCase()) && hay.includes(Team.toLowerCase())) { found = true; break; }
+    }
+    expect(found, `Expected ${Driver} under ${Team}`).toBeTruthy();
+  }
 });
