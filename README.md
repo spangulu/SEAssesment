@@ -1,5 +1,9 @@
 # SEAssesment
 
+**Sarath Panguluri** | Test Automation Engineer | Playwright, TypeScript, UI & API Test Automation
+
+A professional portfolio project demonstrating test automation practices, BDD workflows and API validation.
+
 UI & API Automation Framework
 
 This project contains **Playwright-based automation** for both **UI (BBC Sports)** and **REST Countries API**, integrated with **Cucumber BDD and Allure Reporting**, and **Jenkins CI Pipeline**.
